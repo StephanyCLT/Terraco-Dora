@@ -167,6 +167,33 @@
 }
 
 .hero-btn:hover {
+    /* Botões da Hero */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.gallery-btn {
+    background: transparent;
+    border: 2px solid #c97a45;
+    color: #c97a45;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.gallery-btn:hover {
+    background: #c97a45;
+    color: white;
+}
     background: #ae6435;
     transform: translateY(-2px);
 }
@@ -230,7 +257,7 @@
         <div class="navbar">
             <div class="logo">
                 <h1>Terraço Dora</h1>
-                <span>Sua comemoração aqui!✨</span>
+                <span>Sua comemoração aqui!</span>
             </div>
             <div class="nav-links">
                 <a href="#sobre">O espaço</a>
@@ -251,7 +278,7 @@
         <!-- Texto -->
         <div class="hero-info">
             <h2>
-                Sua comemoração aqui!✨</span>
+                Sua comemoração aqui!</span>
             </h2>
 
             <p>
@@ -260,7 +287,7 @@
 
             <div class="hero-highlights">
                 <div class="highlight-item">
-                    <i class="fas fa-people-group"></i>
+                    <i class="fas fa-people"></i>
                     <span>60 pessoas</span>
                 </div>
 
@@ -280,20 +307,29 @@
                 </div>
 
                 <div class="highlight-item">
-                    <i class="fas fa-ice-cream"></i>
-                    <span>Depósito de Gelo</span>
+                    <i class="fas fa-fridge"></i>
+                    <span>Geladeira e Depósito de Gelo</span>
                 </div>
 
                 <div class="highlight-item">
-                    <i class="fas fa-child-reaching"></i>
+                    <i class="fas fa-bounce-house"></i>
                     <span>Pula-pula</span>
                 </div>
             </div>
 
-            <button class="hero-btn" id="heroWhatsBtn">
-                <i class="fab fa-whatsapp"></i>
-                Falar com Dora
-            </button>
+            <div class="hero-buttons">
+
+    <button class="hero-btn" id="heroWhatsBtn">
+        <i class="fab fa-whatsapp"></i>
+        Falar com Dora
+    </button>
+
+    <a href="#galeria" class="gallery-btn">
+        <i class="fas fa-images"></i>
+        Ver galeria
+    </a>
+
+</div>
         </div>
 
         <!-- Banner -->
@@ -305,75 +341,118 @@
 </section>
     </section>
 
-    <!-- Descrição detalhada do espaço -->
-    <section id="sobre" class="description">
-        <div class="container">
-            <h2 class="section-title">Sobre o Terraço Dora</h2>
-            <div class="desc-grid">
-                <div class="desc-text">
-                    <p>Localizado no Rio Comprido, nosso terraço foi pensado para receber celebrações com conforto. A área total possui <strong>200m²</strong> sendo totalmente coberta, ideal para qualquer clima. Capacidade confortável para até <strong>60 pessoas. Perfeito para festas de aniversário, chá de bebê, eventos e comemorações em geral.</p>
-                    <p>O espaço conta com uma estrutura completa: <strong>churrasqueira</strong>, bancadas de apoio, pia, churrasqueira, geladeira, fogão, depósito de gelo, 24 cadeiras e 5 mesas. Para a diversão da criançada, um <strong>pula-pula está incluso no valor do aluguel! A iluminação adequada e banheiros limpos garantem a comodidade de todos.</p>
-                </div>
-                <div class="amenities">
-                    <h3>⛱️ Comodidades</h3>
-                    <ul>
-                        <li><i class="fas fa-users"></i> Capacidade em média de 60 pessoas</li>
-                        <li><i class="fas fa-drumstick-bite"></i> Churrasqueira</li>
-                        <li><i class="fas fa-restroom"></i> Banheiros</li>
-                        <li><i class="fas fa-child"></i> Pula-pula</li>
-                        <li><i class="fas fa-fridge"></i> Geladeira e Depósito de Gelo</li>
-                        <li><i class="fas fa-chair"></i> 24 cadeiras + 5 mesas</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+/* SOBRE */
 
+.description {
+    padding: 90px 0;
+    background: #fffaf5;
+}
+
+.desc-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.desc-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #4b3b30;
+}
+
+.amenities {
+    background: #f3e3d6;
+    padding: 32px;
+    border-radius: 28px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.amenities h3 {
+    margin-bottom: 24px;
+    color: #9c5b35;
+}
+
+.amenities li {
+    margin-bottom: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
     <!-- Galeria de fotos -->
-    <section id="galeria" class="gallery">
-        <div class="container">
-            <h2 class="section-title">📸 Galeria de fotos & eventos</h2>
-            <div style="margin-bottom: 20px; text-align: center; font-size: 0.95rem; color:#704d2e;">Registros de festas inesquecíveis e detalhes do terraço</div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/288/800/600" alt="Festa de aniversário no terraço"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/30/800/600" alt="Churrasco com amigos"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/126/800/600" alt="Decoração e balões"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/113/800/600" alt="Pula-pula para crianças"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/224/800/600" alt="Vista do terraço à noite"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/36/800/600" alt="Confra empresa com 70 pessoas"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/235/800/600" alt="Estrutura churrasqueira"></div>
-                    <div class="swiper-slide"><img src="https://picsum.photos/id/151/800/600" alt="Evento casamento no terraço"></div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="gallery-caption">Deslize para ver mais fotos de eventos realizados e detalhes do espaço.</div>
-        </div>
-    </section>
+.gallery {
+    background: #f5ece3;
+    padding: 80px 0;
+}
 
-    <!-- Google Maps Integração -->
-    <section id="mapa" class="maps-section">
-        <div class="container">
-            <h2 class="section-title">📍 Onde estamos</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.399430280475!2d-43.19711982487745!3d-22.91006457923938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e81f2ebbd%3A0x2667ae0c8831fb3b!2sR.%20Bar%C3%A3o%20de%20Petr%C3%B3polis%2C%20753%20-%20Rio%20Comprido%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020261-005!5e0!3m2!1spt-BR!2sbr!4v1712179584267!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="address-info">
-                <i class="fas fa-map-pin"></i> Terraço Dora - Rua Barão de Petrópolis, 753, Rio Comprido, Rio de Janeiro - RJ
-            </div>
-        </div>
-    </section>
-</main>
+.swiper {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 30px;
+}
 
-<footer class="footer">
-    <div class="container">
-        <p><i class="fas fa-crown"></i> Terraço Dora • Aluguel para eventos • Capacidade até 60 pessoas</p>
-        <p>Entre em contato pelo WhatsApp e agende uma visita! <a href="#" id="footerWhatsLink">(21) 98029-8063</a></p>
-        <p style="margin-top: 16px; font-size: 0.8rem;">© 2025 Todos os direitos reservados | Espaço administrado por Dora</p>
-    </div>
-</footer>
+.swiper-slide img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.gallery-caption {
+    text-align: center;
+    margin-top: 20px;
+    color: #7a5b48;
+    font-size: 1rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c97a45;
+    background: rgba(255,255,255,0.95);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.swiper-pagination-bullet-active {
+    background: #c97a45;
+}
+
+   /* MAPA */
+
+.maps-section {
+    padding: 80px 0;
+    background: #fffaf5;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e3d0c0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.address-info {
+    margin-top: 24px;
+    background: #f1dfd0;
+    padding: 16px 26px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #5b4334;
+    font-weight: 500;
+}
 
 <!-- Botão flutuante WhatsApp -->
 <a href="#" id="whatsFloatBtn" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
