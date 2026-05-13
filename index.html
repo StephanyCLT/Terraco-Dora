@@ -1,510 +1,739 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Terraço Dora - Aluguel para Festas e Eventos</title>
-    <!-- Google Fonts + Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Swiper JS (galeria fotos) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-   <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f7f1ea;
-        color: #3e3026;
-        scroll-behavior: smooth;
-    }
+<title>Terraço Dora - Comemorações e Eventos</title>
 
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 24px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    /* Header */
-    .header {
-        background-color: #f3e7da;
-        box-shadow: 0 4px 20px rgba(90, 55, 30, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(2px);
-        border-bottom: 1px solid #dcc5b2;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        flex-wrap: wrap;
-    }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    .logo h1 {
-        font-size: 1.8rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #b96d40, #8c4a2f);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        letter-spacing: -0.5px;
-    }
+<style>
 
-    .logo span {
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: #9b5d3d;
-        display: block;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .nav-links a {
-        margin-left: 28px;
-        text-decoration: none;
-        font-weight: 500;
-        color: #5b4334;
-        transition: 0.2s;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    .nav-links a:hover {
-        color: #b96d40;
-    }
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f1ea;
+    color:#3f3025;
+}
 
-    .btn-whats-nav {
-        background-color: #b96d40;
-        color: white !important;
-        padding: 8px 18px;
-        border-radius: 40px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
+/* CONTAINER */
 
-    .btn-whats-nav:hover {
-        background-color: #965234;
-        transform: scale(0.97);
-    }
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+    padding:0 24px;
+}
+
+/* HEADER */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#f2e6da;
+    border-bottom:1px solid #dcc9b8;
+    backdrop-filter:blur(8px);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    flex-wrap:wrap;
+}
+
+.logo h1{
+    font-size:2rem;
+    color:#9d5b36;
+    font-weight:800;
+}
+
+.logo span{
+    color:#8f6b56;
+    font-size:.92rem;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#5a4335;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c67945;
+}
+
+.btn-whats-nav{
+    background:#c67945;
+    color:white !important;
+    padding:12px 22px;
+    border-radius:40px;
+}
 
 /* HERO */
 
-.hero {
-    background: linear-gradient(180deg, #f6eee5 0%, #f7f1ea 100%);
-    padding: 70px 0;
+.hero{
+    padding:80px 0;
+    background:linear-gradient(180deg,#f5ede4 0%, #f7f1ea 100%);
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 60px;
-    align-items: center;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.hero-info h2 {
-    font-size: 4rem;
-    line-height: 1.1;
-    color: #5b3726;
-    margin-bottom: 24px;
-    font-weight: 800;
+.hero-info h2{
+    font-size:4rem;
+    line-height:1.1;
+    color:#5a3423;
+    margin-bottom:26px;
+    font-weight:800;
 }
 
-.hero-info h2 span {
-    color: #c97a45;
+.hero-info p{
+    font-size:1.25rem;
+    line-height:1.8;
+    color:#6d5748;
+    margin-bottom:34px;
+    max-width:650px;
 }
 
-.hero-info p {
-    font-size: 1.35rem;
-    line-height: 1.7;
-    color: #6b5647;
-    margin-bottom: 34px;
-    max-width: 650px;
+.hero-highlights{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:38px;
 }
 
-.hero-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-bottom: 38px;
+.highlight-item{
+    background:#fffaf6;
+    border:1px solid #e5d5c7;
+    border-radius:50px;
+    padding:14px 22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.04);
 }
 
-.highlight-item {
-    background: #fffaf5;
-    border: 1px solid #e7d5c5;
-    border-radius: 50px;
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
-    font-weight: 500;
+.highlight-item i{
+    color:#c67945;
 }
 
-.highlight-item i {
-    color: #c97a45;
-    font-size: 1.2rem;
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
 }
 
-.hero-btn {
-    background: #c97a45;
-    color: white;
-    border: none;
-    padding: 18px 34px;
-    border-radius: 50px;
-    font-size: 1.15rem;
-    font-weight: 700;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 10px 20px rgba(201,122,69,0.25);
-    transition: 0.3s;
+.hero-btn{
+    background:#c67945;
+    color:white;
+    border:none;
+    padding:18px 34px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(198,121,69,.25);
 }
 
-.hero-btn:hover {
-    /* Botões da Hero */
-
-.hero-buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+.hero-btn:hover{
+    background:#a85d31;
 }
 
-.gallery-btn {
-    background: transparent;
-    border: 2px solid #c97a45;
-    color: #c97a45;
-    padding: 16px 28px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s;
+.gallery-btn{
+    border:2px solid #c67945;
+    color:#c67945;
+    padding:16px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
 }
 
-.gallery-btn:hover {
-    background: #c97a45;
-    color: white;
-}
-    background: #ae6435;
-    transform: translateY(-2px);
+.gallery-btn:hover{
+    background:#c67945;
+    color:white;
 }
 
-/* Banner lateral */
-
-.hero-banner {
-    position: relative;
+.hero-banner img{
+    width:100%;
+    height:540px;
+    object-fit:cover;
+    border-radius:42px;
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
 }
-
-.hero-banner img {
-    width: 100%;
-    border-radius: 40px;
-    object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    min-height: 540px;
-}
-
-/* Responsivo */
-
-@media (max-width: 980px) {
-
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-info h2 {
-        font-size: 2.8rem;
-    }
-
-    .hero-banner img {
-        min-height: auto;
-    }
-}
-
-        .swiper-slide img {
-            height: 260px;
-        }
-
-        .map-container {
-            height: 280px;
-        }
-    }
-
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .btn-whats-nav i,
-    .hero-btn i {
-        font-size: 1.2rem;
-    }
-</style>
-</head>
-<body>
-
-<header class="header">
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <h1>Terraço Dora</h1>
-                <span>Sua comemoração aqui!</span>
-            </div>
-            <div class="nav-links">
-                <a href="#sobre">O espaço</a>
-                <a href="#galeria">Galeria</a>
-                <a href="#mapa">Localização</a>
-                <a href="#" id="whatsNavBtn" class="btn-whats-nav"><i class="fab fa-whatsapp"></i> Fale com Dora</a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <section class="hero">
-    <div class="container hero-grid">
-
-        <!-- Texto -->
-        <div class="hero-info">
-            <h2>
-                Sua comemoração aqui!</span>
-            </h2>
-
-            <p>
-                Espaço completo para aniversários, confraternizações e eventos, com infraestrutura confortável para até 60 pessoas.
-            </p>
-
-            <div class="hero-highlights">
-                <div class="highlight-item">
-                    <i class="fas fa-people"></i>
-                    <span>60 pessoas</span>
-                </div>
-
-                <div class="highlight-item">
-                    <i class="fas fa-fire"></i>
-                    <span>Churrasqueira</span>
-                </div>
-
-                <div class="highlight-item">
-                    <i class="fas fa-toilet"></i>
-                    <span>Banheiros</span>
-                </div>
-
-                <div class="highlight-item">
-                    <i class="fas fa-volume-high"></i>
-                    <span>Caixa de Som</span>
-                </div>
-
-                <div class="highlight-item">
-                    <i class="fas fa-fridge"></i>
-                    <span>Geladeira e Depósito de Gelo</span>
-                </div>
-
-                <div class="highlight-item">
-                    <i class="fas fa-bounce-house"></i>
-                    <span>Pula-pula</span>
-                </div>
-            </div>
-
-            <div class="hero-buttons">
-
-    <button class="hero-btn" id="heroWhatsBtn">
-        <i class="fab fa-whatsapp"></i>
-        Falar com Dora
-    </button>
-
-    <a href="#galeria" class="gallery-btn">
-        <i class="fas fa-images"></i>
-        Ver galeria
-    </a>
-
-</div>
-        </div>
-
-        <!-- Banner -->
-        <div class="hero-banner">
-            <img src="./terraco-dora.png" alt="Terraço Dora">
-        </div>
-
-    </div>
-</section>
-    </section>
 
 /* SOBRE */
 
-.description {
-    padding: 90px 0;
-    background: #fffaf5;
+.description{
+    padding:90px 0;
+    background:#fffaf5;
 }
 
-.desc-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    align-items: start;
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:40px;
+    color:#5b3726;
 }
 
-.desc-text {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: #4b3b30;
+.desc-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
 }
 
-.amenities {
-    background: #f3e3d6;
-    padding: 32px;
-    border-radius: 28px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+.desc-text{
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#4c3b2f;
 }
 
-.amenities h3 {
-    margin-bottom: 24px;
-    color: #9c5b35;
+.desc-text p{
+    margin-bottom:20px;
 }
 
-.amenities li {
-    margin-bottom: 18px;
-    display: flex;
-    gap: 14px;
-    align-items: center;
-}
-    <!-- Galeria de fotos -->
-.gallery {
-    background: #f5ece3;
-    padding: 80px 0;
+.amenities{
+    background:#f3e3d6;
+    padding:34px;
+    border-radius:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
-.swiper {
-    width: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    margin-top: 30px;
+.amenities h3{
+    margin-bottom:24px;
+    color:#9d5b36;
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 24px;
+.amenities ul{
+    list-style:none;
 }
 
-.gallery-caption {
-    text-align: center;
-    margin-top: 20px;
-    color: #7a5b48;
-    font-size: 1rem;
+.amenities li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.amenities i{
+    color:#c67945;
+}
+
+/* GALERIA */
+
+.gallery{
+    padding:90px 0;
+    background:#f5ece3;
+}
+
+.swiper{
+    margin-top:30px;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:24px;
+}
+
+.gallery-caption{
+    text-align:center;
+    margin-top:22px;
+    color:#7c5d49;
 }
 
 .swiper-button-next,
-.swiper-button-prev {
-    color: #c97a45;
-    background: rgba(255,255,255,0.95);
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.swiper-button-prev{
+    color:#c67945;
+    background:rgba(255,255,255,.92);
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
 }
 
-.swiper-pagination-bullet-active {
-    background: #c97a45;
+.swiper-pagination-bullet-active{
+    background:#c67945;
 }
 
-   /* MAPA */
+/* MAPA */
 
-.maps-section {
-    padding: 80px 0;
-    background: #fffaf5;
+.maps-section{
+    padding:90px 0;
+    background:#fffaf5;
 }
 
-.map-container {
-    width: 100%;
-    height: 450px;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    border: 1px solid #e3d0c0;
+.map-container{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+    border-radius:32px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+.map-container iframe{
+    width:100%;
+    height:100%;
+    border:0;
 }
 
-.address-info {
-    margin-top: 24px;
-    background: #f1dfd0;
-    padding: 16px 26px;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: #5b4334;
-    font-weight: 500;
+.address-info{
+    margin-top:24px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:#f1dfd0;
+    padding:16px 28px;
+    border-radius:50px;
+    color:#5b4334;
+    font-weight:500;
 }
 
-<!-- Botão flutuante WhatsApp -->
-<a href="#" id="whatsFloatBtn" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+/* FOOTER */
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    // Configuração do número de WhatsApp da dona
-    const phoneNumber = "5521980298063";
-    const whatsappMessage = "Olá! Vi o site do Terraço Dora e tenho interesse em alugar para um evento. Gostaria de mais informações!";
+.footer{
+    background:#4e3426;
+    color:#f1e5d8;
+    text-align:center;
+    padding:50px 0;
+}
 
-    function openWhatsApp() {
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(url, '_blank');
+.footer a{
+    color:#ffd1a8;
+    text-decoration:none;
+}
+
+/* WHATS FLOAT */
+
+.whatsapp-float{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    text-decoration:none;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:980px){
+
+    .hero-grid,
+    .desc-grid{
+        grid-template-columns:1fr;
     }
 
-    // Capturar todos os botões WhatsApp
-    const heroBtn = document.getElementById('heroWhatsBtn');
-    const navBtn = document.getElementById('whatsNavBtn');
-    const footerLink = document.getElementById('footerWhatsLink');
-    const floatBtn = document.getElementById('whatsFloatBtn');
+    .hero-info h2{
+        font-size:2.8rem;
+    }
 
-    if (heroBtn) heroBtn.addEventListener('click', openWhatsApp);
-    if (navBtn) navBtn.addEventListener('click', openWhatsApp);
-    if (footerLink) footerLink.addEventListener('click', (e) => { e.preventDefault(); openWhatsApp(); });
-    if (floatBtn) floatBtn.addEventListener('click', (e) => { e.preventDefault(); openWhatsApp(); });
+    .hero-banner img{
+        height:auto;
+    }
 
-    // Inicializar Swiper (galeria)
-    const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 24,
-        slidesPerView: 1,
-        autoplay: { delay: 3500, disableOnInteraction: false },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        breakpoints: {
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+    .nav-links{
+        justify-content:center;
+        margin-top:18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<div class="navbar">
+
+<div class="logo">
+<h1>Terraço Dora</h1>
+<span>Sua comemoração aqui!</span>
+</div>
+
+<div class="nav-links">
+<a href="#sobre">O espaço</a>
+<a href="#galeria">Galeria</a>
+<a href="#mapa">Localização</a>
+
+<a href="#" id="whatsNavBtn" class="btn-whats-nav">
+<i class="fab fa-whatsapp"></i>
+Fale com Dora
+</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-info">
+
+<h2>Sua comemoração aqui!</h2>
+
+<p>
+Espaço completo para aniversários, confraternizações e eventos,
+com infraestrutura confortável para até 60 pessoas.
+</p>
+
+<div class="hero-highlights">
+
+<div class="highlight-item">
+<i class="fas fa-people"></i>
+<span>60 pessoas</span>
+</div>
+
+<div class="highlight-item">
+<i class="fas fa-grill"></i>
+<span>Churrasqueira</span>
+</div>
+
+<div class="highlight-item">
+<i class="fas fa-toilet"></i>
+<span>Banheiros</span>
+</div>
+
+<div class="highlight-item">
+<i class="fas fa-volume-high"></i>
+<span>Caixa de Som</span>
+</div>
+
+<div class="highlight-item">
+<i class="fas fa-fridge"></i>
+<span>Geladeira e Depósito de Gelo</span>
+</div>
+
+<div class="highlight-item">
+<i class="fas fa-bounce-house"></i>
+<span>Pula-pula</span>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button class="hero-btn" id="heroWhatsBtn">
+<i class="fab fa-whatsapp"></i>
+Falar com Dora
+</button>
+
+<a href="#galeria" class="gallery-btn">
+<i class="fas fa-images"></i>
+Ver galeria
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-banner">
+<img src="./terraco-dora.png" alt="Terraço Dora">
+</div>
+
+</div>
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre" class="description">
+
+<div class="container">
+
+<h2 class="section-title">Sobre o Terraço Dora</h2>
+
+<div class="desc-grid">
+
+<div class="desc-text">
+
+<p>
+Localizado no Rio Comprido, nosso terraço foi pensado para receber
+celebrações com conforto.
+</p>
+
+<p>
+O espaço é coberto e possui churrasqueira,
+geladeira, mesas, cadeiras, banheiros e outras estruturas
+ideais para festas e confraternizações.
+</p>
+
+<p>
+Perfeito para aniversários, reuniões familiares,
+chá revelação, confraternizações e eventos em geral.
+</p>
+
+</div>
+
+<div class="amenities">
+
+<h3>Comodidades</h3>
+
+<ul>
+
+<li>
+<i class="fas fa-people"></i>
+60 pessoas
+</li>
+
+<li>
+<i class="fas fa-grill"></i>
+Churrasqueira
+</li>
+
+<li>
+<i class="fas fa-toilet"></i>
+Banheiros
+</li>
+
+<li>
+<i class="fas fa-bounce-house"></i>
+Pula-pula
+</li>
+
+<li>
+<i class="fas fa-chair"></i>
+Mesas e cadeiras
+</li>
+
+<li>
+<i class="fas fa-fridge"></i>
+Geladeira e Depósito de gelo
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria" class="gallery">
+
+<div class="container">
+
+<h2 class="section-title">Galeria de fotos & eventos</h2>
+
+<div class="swiper mySwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="https://picsum.photos/id/1018/800/600">
+</div>
+
+<div class="swiper-slide">
+<img src="https://picsum.photos/id/1015/800/600">
+</div>
+
+<div class="swiper-slide">
+<img src="https://picsum.photos/id/1025/800/600">
+</div>
+
+<div class="swiper-slide">
+<img src="https://picsum.photos/id/1040/800/600">
+</div>
+
+<div class="swiper-slide">
+<img src="https://picsum.photos/id/1060/800/600">
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+
+</div>
+
+<div class="gallery-caption">
+Deslize para ver mais fotos do espaço.
+</div>
+
+</div>
+</section>
+
+<!-- MAPA -->
+
+<section id="mapa" class="maps-section">
+
+<div class="container">
+
+<h2 class="section-title">Onde estamos</h2>
+
+<div class="map-container">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.399430280475!2d-43.19711982487745!3d-22.91006457923938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e81f2ebbd%3A0x2667ae0c8831fb3b!2sR.%20Bar%C3%A3o%20de%20Petr%C3%B3polis%2C%20753%20-%20Rio%20Comprido%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020261-005!5e0!3m2!1spt-BR!2sbr!4v1712179584267!5m2!1spt-BR!2sbr"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<div class="address-info">
+<i class="fas fa-map-marker-alt"></i>
+Rua Barão de Petrópolis, 753 - Rio Comprido - RJ
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+
+<div class="container">
+
+<p>
+<i class="fas fa-crown"></i>
+Terraço Dora • Eventos & Comemorações
+</p>
+
+<br>
+
+<p>
+Entre em contato pelo WhatsApp:
+<a href="#" id="footerWhatsLink">(21) 98029-8063</a>
+</p>
+
+<br>
+
+<p style="font-size:.85rem;">
+© 2025 Terraço Dora
+</p>
+
+</div>
+
+</footer>
+
+<a href="#" id="whatsFloatBtn" class="whatsapp-float">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+const phoneNumber = "5521980298063";
+
+const whatsappMessage =
+"Olá! Vi o site do Terraço Dora e gostaria de mais informações.";
+
+function openWhatsApp() {
+
+    const url =
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank");
+}
+
+document
+.getElementById("heroWhatsBtn")
+.addEventListener("click", openWhatsApp);
+
+document
+.getElementById("whatsNavBtn")
+.addEventListener("click", openWhatsApp);
+
+document
+.getElementById("footerWhatsLink")
+.addEventListener("click", function(e){
+    e.preventDefault();
+    openWhatsApp();
+});
+
+document
+.getElementById("whatsFloatBtn")
+.addEventListener("click", function(e){
+    e.preventDefault();
+    openWhatsApp();
+});
+
+new Swiper(".mySwiper", {
+    loop:true,
+    spaceBetween:24,
+    slidesPerView:1,
+    autoplay:{
+        delay:3500,
+        disableOnInteraction:false
+    },
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev"
+    },
+    breakpoints:{
+        700:{
+            slidesPerView:2
+        },
+        1024:{
+            slidesPerView:3
         }
-    });
+    }
+});
 
-    // Suavizar links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === "#" || targetId === "") return;
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
 </script>
+
 </body>
 </html>
