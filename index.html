@@ -294,6 +294,15 @@ body{
     background:#c67945;
 }
 
+```css
+.gallery-caption{
+    text-align:center;
+    margin-top:12px;
+    font-size:.95rem;
+    color:#6d5748;
+    font-weight:500;
+}
+    
 /* MAPA */
 
 .maps-section{
@@ -559,6 +568,7 @@ Geladeira
 </div>
 </section>
 
+```html
 <!-- GALERIA -->
 
 <section id="galeria" class="gallery">
@@ -572,57 +582,98 @@ Geladeira
 <div class="swiper-wrapper">
 
 <div class="swiper-slide">
-  <img src="terraço foto 1.jpeg">
+  <div>
+    <img src="terraço foto 1.jpeg" alt="Visão geral do terraço">
+    <p class="gallery-caption">Visão geral do espaço</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="espaço com cadeiras, mesas e pula-pula.jpeg">
+  <div>
+    <img src="espaço com cadeiras, mesas e pula-pula.jpeg" alt="Área com mesas e pula-pula">
+    <p class="gallery-caption">Área preparada para eventos infantis</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <video controls muted loop>
-    <source src="videoterraco.mp4" type="video/mp4">
-  </video>
+  <div>
+    <video controls muted loop playsinline>
+      <source src="./videoterraco.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <p class="gallery-caption">Vídeo do espaço</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="cadeiras.jpeg">
+  <div>
+    <img src="cadeiras.jpeg" alt="Cadeiras disponíveis">
+    <p class="gallery-caption">Cadeiras disponíveis</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="caixa de som.jpeg">
+  <div>
+    <img src="caixa de som.jpeg" alt="Caixa de som">
+    <p class="gallery-caption">Caixa de som inclusa</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="churrasqueira.jpeg">
+  <div>
+    <img src="churrasqueira.jpeg" alt="Churrasqueira">
+    <p class="gallery-caption">Área de churrasqueira</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="cozinha.jpeg">
+  <div>
+    <img src="cozinha.jpeg" alt="Cozinha">
+    <p class="gallery-caption">Estrutura de cozinha</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="fogão e geladeira.jpeg">
+  <div>
+    <img src="fogão e geladeira.jpeg" alt="Fogão e geladeira">
+    <p class="gallery-caption">Fogão e geladeira</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="decoração pilastra.jpeg">
+  <div>
+    <img src="decoração pilastra.jpeg" alt="Decoração">
+    <p class="gallery-caption">Detalhes da decoração</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="depósito de gelo.jpeg">
+  <div>
+    <img src="depósito de gelo.jpeg" alt="Depósito de gelo">
+    <p class="gallery-caption">Depósito de gelo</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="mesa.jpeg">
+  <div>
+    <img src="mesa.jpeg" alt="Mesas">
+    <p class="gallery-caption">Mesas disponíveis</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="pula-pula.jpeg">
+  <div>
+    <img src="pula-pula.jpeg" alt="Pula-pula">
+    <p class="gallery-caption">Área infantil com pula-pula</p>
+  </div>
 </div>
 
 <div class="swiper-slide">
-  <img src="toldos.jpeg">
+  <div>
+    <img src="toldos.jpeg" alt="Cobertura">
+    <p class="gallery-caption">Espaço totalmente coberto</p>
+  </div>
 </div>
 
 </div>
@@ -630,10 +681,6 @@ Geladeira
 <div class="swiper-button-next"></div>
 <div class="swiper-button-prev"></div>
 <div class="swiper-pagination"></div>
-
-</div>
-
-<div class="gallery-caption">
 
 </div>
 
