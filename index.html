@@ -269,6 +269,22 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+}
+
+.slide-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:14px 18px;
+    background:linear-gradient(to top, rgba(0,0,0,.75), transparent);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:0 0 24px 24px;
 }
 
 .swiper-slide img,
@@ -630,50 +646,38 @@ Geladeira
 <div class="swiper-slide">
   <div>
     <img src="cozinha.jpeg" alt="Cozinha">
-    <p class="gallery-caption">Estrutura de cozinha</p>
+    <p class="gallery-caption">Estrutura da Cozinha</p>
   </div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="fogão e geladeira.jpeg" alt="Fogão e geladeira">
-    <p class="gallery-caption">Fogão e geladeira</p>
-  </div>
+  <img src="fogão e geladeira.jpeg">
+  <div class="slide-caption">Fogão e Geladeira</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="decoração pilastra.jpeg" alt="Decoração">
-    <p class="gallery-caption">Detalhes da decoração</p>
-  </div>
+    <img src="decoração pilastra.jpeg">
+    <p class="slide-caption">Detalhes da Decoração</p>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="depósito de gelo.jpeg" alt="Depósito de gelo">
-    <p class="gallery-caption">Depósito de gelo</p>
-  </div>
+    <img src="depósito de gelo.jpeg">
+    <p class="slide-caption">Depósito de Gelo</p>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="mesa.jpeg" alt="Mesas">
-    <p class="gallery-caption">Mesas disponíveis</p>
-  </div>
+    <img src="mesa.jpeg">
+    <p class="slide-caption">Mesas disponíveis</p>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="pula-pula.jpeg" alt="Pula-pula">
-    <p class="gallery-caption">Área infantil com pula-pula</p>
-  </div>
+    <img src="pula-pula.jpeg">
+    <p class="slide-caption">Pula-Pula</p>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="toldos.jpeg" alt="Cobertura">
-    <p class="gallery-caption">Espaço totalmente coberto</p>
-  </div>
+    <img src="toldos.jpeg">
+    <p class="gallery-caption">Espaço Coberto</p>
 </div>
 
 </div>
