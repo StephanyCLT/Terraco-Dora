@@ -274,17 +274,26 @@ body{
     border-radius:24px;
 }
 
+.swiper-slide img,
+.swiper-slide video{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:24px;
+    display:block;
+}
+
 .slide-caption{
     position:absolute;
     bottom:0;
     left:0;
     width:100%;
-    padding:14px 18px;
-    background:linear-gradient(to top, rgba(0,0,0,.75), transparent);
+    padding:18px;
+    background:linear-gradient(to top, rgba(0,0,0,.82), transparent);
     color:white;
     font-size:1rem;
     font-weight:600;
-    border-radius:0 0 24px 24px;
+    letter-spacing:.3px;
 }
 
 .swiper-slide img,
@@ -308,15 +317,6 @@ body{
 
 .swiper-pagination-bullet-active{
     background:#c67945;
-}
-
-```css
-.gallery-caption{
-    text-align:center;
-    margin-top:12px;
-    font-size:.95rem;
-    color:#6d5748;
-    font-weight:500;
 }
     
 /* MAPA */
@@ -598,86 +598,71 @@ Geladeira
 <div class="swiper-wrapper">
 
 <div class="swiper-slide">
-  <div>
-    <img src="terraço foto 1.jpeg" alt="Visão geral do terraço">
-    <p class="gallery-caption">Visão geral do espaço</p>
-  </div>
+  <img src="terraço foto 1.jpeg" alt="">
+  <div class="slide-caption">Visão geral do espaço</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="espaço com cadeiras, mesas e pula-pula.jpeg" alt="Área com mesas e pula-pula">
-    <p class="gallery-caption">Área preparada para eventos infantis</p>
-  </div>
+  <img src="espaço com cadeiras, mesas e pula-pula.jpeg" alt="">
+  <div class="slide-caption">Área preparada para eventos</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <video controls muted loop playsinline>
-      <source src="./videoterraco.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
+  <video controls muted loop playsinline preload="metadata">
+    <source src="./videoterraco.mp4" type="video/mp4">
+  </video>
 
-    <p class="gallery-caption">Vídeo do espaço</p>
-  </div>
+  <div class="slide-caption">Vídeo do espaço</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="cadeiras.jpeg" alt="Cadeiras disponíveis">
-    <p class="gallery-caption">Cadeiras disponíveis</p>
-  </div>
+  <img src="cadeiras.jpeg" alt="">
+  <div class="slide-caption">Cadeiras disponíveis</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="caixa de som.jpeg" alt="Caixa de som">
-    <p class="gallery-caption">Caixa de som inclusa</p>
-  </div>
+  <img src="caixa de som.jpeg" alt="">
+  <div class="slide-caption">Caixa de som inclusa</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="churrasqueira.jpeg" alt="Churrasqueira">
-    <p class="gallery-caption">Área de churrasqueira</p>
-  </div>
+  <img src="churrasqueira.jpeg" alt="">
+  <div class="slide-caption">Área de churrasqueira</div>
 </div>
 
 <div class="swiper-slide">
-  <div>
-    <img src="cozinha.jpeg" alt="Cozinha">
-    <p class="gallery-caption">Estrutura da Cozinha</p>
-  </div>
+  <img src="cozinha.jpeg" alt="">
+  <div class="slide-caption">Estrutura da cozinha</div>
 </div>
 
 <div class="swiper-slide">
-  <img src="fogão e geladeira.jpeg">
-  <div class="slide-caption">Fogão e Geladeira</div>
+  <img src="fogão e geladeira.jpeg" alt="">
+  <div class="slide-caption">Fogão e geladeira</div>
 </div>
 
 <div class="swiper-slide">
-    <img src="decoração pilastra.jpeg">
-    <p class="slide-caption">Detalhes da Decoração</p>
+  <img src="decoração pilastra.jpeg" alt="">
+  <div class="slide-caption">Detalhes da decoração</div>
 </div>
 
 <div class="swiper-slide">
-    <img src="depósito de gelo.jpeg">
-    <p class="slide-caption">Depósito de Gelo</p>
+  <img src="depósito de gelo.jpeg" alt="">
+  <div class="slide-caption">Depósito de gelo</div>
 </div>
 
 <div class="swiper-slide">
-    <img src="mesa.jpeg">
-    <p class="slide-caption">Mesas disponíveis</p>
+  <img src="mesa.jpeg" alt="">
+  <div class="slide-caption">Mesas disponíveis</div>
 </div>
 
 <div class="swiper-slide">
-    <img src="pula-pula.jpeg">
-    <p class="slide-caption">Pula-Pula</p>
+  <img src="pula-pula.jpeg" alt="">
+  <div class="slide-caption">Pula-pula</div>
 </div>
 
 <div class="swiper-slide">
-    <img src="toldos.jpeg">
-    <p class="gallery-caption">Espaço Coberto</p>
+  <img src="toldos.jpeg" alt="">
+  <div class="slide-caption">Espaço coberto</div>
 </div>
 
 </div>
